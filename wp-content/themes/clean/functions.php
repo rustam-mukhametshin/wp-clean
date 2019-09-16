@@ -79,6 +79,15 @@ if ( ! function_exists( 'clean_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+        // Add theme support for selecting format of post.
+        add_theme_support('post-formats', [
+            'aside',
+            'gallery',
+            'image',
+            'video',
+            'audio',
+        ]);
 	}
 endif;
 add_action( 'after_setup_theme', 'clean_setup' );
