@@ -132,6 +132,9 @@ function clean_scripts()
 {
     wp_enqueue_style('clean-style', get_stylesheet_uri());
 
+    wp_enqueue_style('clean-google-font-1', 'http://fonts.googleapis.com/css?family=Roboto:400,300,100,500');
+    wp_enqueue_style('clean-google-font-2', 'http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,500');
+
 
     if (false):
         wp_enqueue_script('clean-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
