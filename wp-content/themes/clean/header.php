@@ -50,7 +50,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1 class="intro-lead">Left Sidebar Page</h1>
+                    <h1 class="intro-lead"><?php bloginfo('description') ?></h1>
                     <p>Lorem ipsum dolor sit amet consectetur</p>
                 </div>
             </div>
