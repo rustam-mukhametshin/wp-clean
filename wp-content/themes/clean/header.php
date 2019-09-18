@@ -27,11 +27,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
-                        <div class="navbar-header"><a href="javascript:void(0)"
-                                                      class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block"
-                                                      data-toggle="collapse" data-target="#fh5co-navbar"
-                                                      aria-expanded="false" aria-controls="navbar"><i></i></a> <a
-                                    class="navbar-brand" href="https://www.free-css.com/free-css-templates">Clean</a>
+                        <div class="navbar-header">
+                            <!-- Mobile Toggle Menu Button -->
+                            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block"
+                               data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false"
+                               aria-controls="navbar"><i></i></a>
+                            <a class="navbar-brand" href="<?= home_url('/') ?>"><?php bloginfo('name') ?></a>
                         </div>
                         <div id="fh5co-navbar" class="navbar-collapse collapse">
                             <?php wp_nav_menu([
@@ -44,7 +45,6 @@
             </div>
         </nav>
     </header>
-
 <div id="fh5co-main">
     <div class="fh5co-intro text-center">
         <div class="container">
