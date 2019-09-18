@@ -7409,7 +7409,9 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-header > .navbar li a:hover {
   color: #e32929;
 }
-#fh5co-header > .navbar li.active a {
+#fh5co-header > .navbar li.active a,
+#fh5co-header > .navbar li.current-menu-item a
+{
   background: none !important;
   color: #e32929;
 }

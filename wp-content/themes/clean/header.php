@@ -34,14 +34,10 @@
                                     class="navbar-brand" href="https://www.free-css.com/free-css-templates">Clean</a>
                         </div>
                         <div id="fh5co-navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="https://www.free-css.com/free-css-templates"><span>Home <span
-                                                    class="border"></span></span></a></li>
-                                <li><a href="right-sidebar.php"><span>Right Sidebar <span class="border"></span></span></a>
-                                </li>
-                                <li class="active"><a href="left-sidebar.php"><span>Left Sidebar <span
-                                                    class="border"></span></span></a></li>
-                            </ul>
+                            <?php wp_nav_menu([
+                                'theme_location' => 'menu-1',
+                                'menu_class' => 'nav navbar-nav navbar-right',
+                            ]) ?>
                         </div>
                     </div>
                 </div>
