@@ -10,21 +10,37 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function clean_customize_register( $wp_customize ) {
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+function clean_customize_register($wp_customize)
+{
+    $wp_customize->get_setting('blogname')->transport = 'postMessage';
+    $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
+    $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 
-	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial( 'blogname', array(
-			'selector'        => '.site-title a',
-			'render_callback' => 'clean_customize_partial_blogname',
-		) );
-		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-			'selector'        => '.site-description',
-			'render_callback' => 'clean_customize_partial_blogdescription',
-		) );
-	}
+    if (isset($wp_customize->selective_refresh)) {
+        $wp_customize->selective_refresh->add_partial('blogname', array(
+            'selector' => '.site-title a',
+            'render_callback' => 'clean_customize_partial_blogname',
+        ));
+        $wp_customize->selective_refresh->add_partial('blogdescription', array(
+            'selector' => '.site-description',
+            'render_callback' => 'clean_customize_partial_blogdescription',
+        ));
+    }
+
+    // Custom Customizer Settings
+    $wp_customize->add_section('clean_theme_options', [
+        'title' => __('Theme Options', 'clean'),
+        'priority' => 10,
+    ]);
+    $wp_customize->add_setting('clean_home_category', [
+        'default' => '',
+//       'transport' => 'postMessage',
+    ]);
+    $wp_customize->add_control('clean_home_category', [
+        'label' => __('Category on Home Page', 'clean'),
+        'section' => 'clean_theme_options',
+        'type' => 'text',
+    ]);
 }
 add_action( 'customize_register', 'clean_customize_register' );
 
