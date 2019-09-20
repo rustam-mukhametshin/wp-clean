@@ -2,7 +2,7 @@
 
 get_header();
 ?>
-
+<?php if (is_front_page() && get_theme_mod('clean_home_category')): ?>
     <div id="fh5co-portfolio">
         <?php $query = new WP_Query([
             'category_name' => get_theme_mod('clean_home_category'),
@@ -28,6 +28,6 @@ get_header();
 
         <?php wp_reset_postdata(); ?>
     </div>
-
+<?php endif; ?>
 <?php
 get_footer();
