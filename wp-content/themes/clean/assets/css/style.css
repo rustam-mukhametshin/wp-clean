@@ -8924,3 +8924,25 @@ a > img.fh5co-align-center {
     text-decoration: none;
     color: #000;
 }
+
+#fh5co-services .fw-iconbox-image {
+    float: left;
+    width: 20%;
+}
+
+#fh5co-services .fw-iconbox-image i {
+    font-size: 40px;
+    color: #e32929;
+}
+
+.fw-iconbox-aside {
+    width: 70%;
+    float: right;
+    text-align: left;
+}
+
+#fh5co-services .fw-iconbox .fw-iconbox-title h3 {
+    font-weight: 300;
+    margin-top: 0;
+    font-size: 18px;
+}
