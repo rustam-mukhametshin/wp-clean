@@ -8946,3 +8946,7 @@ a > img.fh5co-align-center {
     margin-top: 0;
     font-size: 18px;
 }
+
+a.btn:visited {
+    color: #fff;
+}
