@@ -28,6 +28,7 @@ get_header();
 
         <?php wp_reset_postdata(); ?>
     </div>
+<div class="clearfix"></div>
 <?php endif; ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
