@@ -77,7 +77,7 @@
 	// Animate Feature
 	var animateFeatureIcons = function() {
 		if ( $('#fh5co-services').length > 0 ) {	
-			$('#fh5co-services .to-animate').each(function( k ) {
+			$('#fh5co-services .fw-iconbox-image').each(function( k ) {
 				
 				var el = $(this);
 				

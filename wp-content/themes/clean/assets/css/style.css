@@ -8889,7 +8889,8 @@ a > img.fh5co-align-center {
     font-family: "Roboto Slab", arial, sans-serif;
 }
 
-#fh5co-team .fw-row > div {
+#fh5co-team .fw-row > div,
+.fw-iconbox-image {
     opacity: 0;
 }
 
