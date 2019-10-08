@@ -6,6 +6,7 @@ get_header();
     <div id="fh5co-portfolio">
         <?php $query = new WP_Query([
             'category_name' => get_theme_mod('clean_home_category'),
+            'posts_per_page' => 4,
         ]) ?>
         <?php if ($query->have_posts()) : $i = 1;
             while ($query->have_posts()) : $query->the_post(); ?>
